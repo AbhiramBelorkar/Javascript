@@ -1,5 +1,23 @@
-// Object literals
 
+
+/*
+    How to Define a JavaScript Object
+
+    Using an Object Literal
+    Using the new Keyword
+    Using an Object Constructor
+
+    In JavaScript, almost "everything" is an object.
+
+    Objects are objects
+    Maths are objects
+    Functions are objects
+    Dates are objects
+    Arrays are objects
+    Maps are objects
+    Sets are objects
+*/ 
+// Object literals
 const obj = {
     name : "ram",
     age :20,
@@ -12,8 +30,35 @@ console.log(obj["age"]);
 console.log(obj["email"]);
 
 
-// Object.freeze()
+//new keyword
+// Create an Object
+const person = new Object();
 
+// Add Properties
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+
+//
+// The object x is not a copy of person. The object x is person.
+// The object x and the object person share the same memory address.
+
+//Create an Object
+const person = {
+    firstName:"John",
+    lastName:"Doe",
+    age:50, 
+    eyeColor:"blue"
+  }
+  
+  // Try to create a copy
+  const x = person;
+  
+  // This will change age in person:
+  x.age = 10;
+
+// Object.freeze()
 Object.freeze(obj)
 obj.age = 30
 obj.name = "sham"

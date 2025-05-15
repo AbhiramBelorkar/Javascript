@@ -7,7 +7,7 @@ if(true){
     // let a = 600;
     var b = 200;    // var has global scope and you can redeclare var variable
     var b = 500;
-    const c = 300   // maintains scope, cannot redeclare, cannot change value
+    const c = 300   // maintains scope, cannot redeclare, cannot change value, assign when declared
     // c = 900;
 
     console.log("Inner " + a);
