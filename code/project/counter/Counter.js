@@ -1,18 +1,29 @@
-const buttons = document.querySelectorAll('button');
-const value = document.getElementById('countDisplay')
-// console.log(value);
+const increment = document.getElementById('increment')
+const decrement = document.getElementById('decrement')
+const reset = document.getElementById('reset')
+const counter = document.getElementById('counter')
 
+console.log(increment);
+console.log(decrement);
+console.log(reset);
 
-buttons.forEach((button) => {
-    button.addEventListener('click',(e)=>{       
-        console.log(this)
-        if(e.target.id == "dec"){
-            value.textContent = Number(value.textContent) - 1;
-        } else if(e.target.id == "inc"){
-            value.textContent = Number(value.textContent) + 1;
-        } else if(e.target.id == "res"){
-            value.textContent = 0;
-        }
-    })
+let count = 0;
+
+increment.addEventListener('click', ()=>{
+    console.log("increment");
+    count++
+    counter.textContent = count;
+})
+
+decrement.addEventListener('click', ()=>{
+    if(count > 0){
+        count--
+    }  
+    counter.textContent = count;
     
+})
+
+reset.addEventListener('click', ()=>{
+    count = 0
+    counter.textContent = count;
 })

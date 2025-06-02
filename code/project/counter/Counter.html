@@ -1,46 +1,54 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Counter App</title>
-    <style>
-        #countDisplay {
-            font-size: 48px;
-            font-weight: bold;
-            margin: 20px;
-        }
+  <meta charset="UTF-8">
+  <title>Counter App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #f0f0f0;
+    }
 
-        .positive {
-            color: green;
-        }
+    #counter {
+      font-size: 5rem;
+      margin: 20px;
+    }
 
-        .negative {
-            color: red;
-        }
+    .positive {
+      color: green;
+    }
 
-        .zero {
-            color: gray;
-        }
+    .negative {
+      color: red;
+    }
 
-        button {
-            font-size: 18px;
-            margin: 5px;
-            padding: 10px 20px;
-        }
-    </style>
+    .zero {
+      color: black;
+    }
+
+    button {
+      font-size: 1.5rem;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
+  </style>
 </head>
-
 <body>
 
-    <h2>🔢 Counter App</h2>
+  <h1>Counter App</h1>
+  <div id="counter" class="zero">0</div>
 
-    <div id="countDisplay" class="zero">0</div>
+  <button id="increment">Increment</button>
+  <button id="decrement">Decrement</button>
+  <button id="reset">Reset</button>
 
-    <button id="dec">Decrement</button>
-    <button id="res">Reset</button>
-    <button id="inc">Increment</button>
-
-    <script src="Counter.js"></script>
+  <script src="counter.js"></script>
 </body>
-
 </html>
